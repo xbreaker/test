@@ -1,0 +1,60 @@
+name: Feature Request
+description: Propose a new feature
+title: "[Feature]: "
+labels: ["type:feature", "status:triage"]
+assignees:
+  - xbreaker
+body:
+  - type: markdown
+    attributes:
+      value: |        
+        Don't forget to check for existing issues/discussions regarding your proposal. We might already have it.
+        https://github.com/xbreaker/franz/issues
+        https://github.com/xbreaker/franz/discussions
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software or commit hash are you running?
+      placeholder: ex. 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Is your proposal related to a problem?
+      description: |
+        Provide a clear and concise description of what the problem is.
+        For example, "I'm always frustrated when..."
+      placeholder: Tell us what you want!
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: |
+        Provide a clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: |
+        Let us know about other solutions you've tried or researched.
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: |
+        Is there anything else you can add about the proposal?
+        You might want to link to related issues here, if you haven't already.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/xbreaker/franz/blob/master/CONTRIBUTING.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
