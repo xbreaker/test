@@ -1,22 +1,25 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["type:bug", "status:triage"]
 assignees:
-  - octocat
+  - xbreaker
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+        Don't forget to check for existing issues/discussions regarding your proposal. We might already have it.
+        https://github.com/xbreaker/franz/issues
+        https://github.com/xbreaker/franz/discussions
   - type: input
-    id: contact
+    id: version
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Version
+      description: What version of our software are you running?
+      placeholder: ex. 0.1.0
     validations:
-      required: false
+      required: true
   - type: textarea
     id: what-happened
     attributes:
@@ -24,16 +27,6 @@ body:
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
       value: "A bug happened!"
-    validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
     validations:
       required: true
   - type: dropdown
@@ -47,10 +40,21 @@ body:
         - Safari
         - Microsoft Edge
   - type: textarea
+    id: step-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        We'd like you to provide an example setup (via docker-compose, helm, etc.) 
+        to reproduce the problem, especially with a complex setups.
+      value: "Steps to reproduce the behavior:
+      1. "
+  - type: textarea
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: |
+        Please copy and paste any relevant log output. 
+        This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: checkboxes
     id: terms
