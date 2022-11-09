@@ -9,6 +9,7 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
+        
         Don't forget to check for existing issues/discussions regarding your proposal. We might already have it.
         https://github.com/xbreaker/franz/issues
         https://github.com/xbreaker/franz/discussions
@@ -46,7 +47,7 @@ body:
       description: |
         We'd like you to provide an example setup (via docker-compose, helm, etc.) 
         to reproduce the problem, especially with a complex setups.
-      value: "Steps to reproduce the behavior:
+      value: "Steps to reproduce the behavior:\n
       1. "
   - type: textarea
     id: logs
